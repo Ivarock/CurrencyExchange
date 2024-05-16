@@ -22,7 +22,7 @@ if (isset($rates[$conversionCurrency]) == false) {
 
 $rate = $rates[$conversionCurrency];
 if ($rate == false) {
-    echo "Invalid currency code or conversion rate not available";
+    exit("Invalid currency code or conversion rate not available");
 } else {
     $convertedAmount = $baseAmount * $rate;
     echo strtoupper($baseCurrency) . " " . number_format($baseAmount, 2)
